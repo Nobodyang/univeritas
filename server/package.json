@@ -1,0 +1,17 @@
+{
+  "name": "univeritas-server",
+  "version": "1.0.0",
+  "description": "学府真鉴 UniVeritas 自部署后端（账号 / 收藏清单 / 论坛）",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "express": "^4.21.2"
+  }
+}
