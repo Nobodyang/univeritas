@@ -4804,7 +4804,7 @@ footer a:hover{color:#D4AF37}
 </style>
 </head>
 <body>
-<nav class="navbar"><div class="wrap"><div class="brand" onclick="navigate('home')"><div class="brand-mark">U</div><div class="brand-text">UniVeritas<small id="brand-sub">学府真鉴</small></div></div><div class="nav-links"><a class="nav-link active" id="nav-home" data-r="home" onclick="navigate('home')">首页</a><a class="nav-link" id="nav-library" data-r="library" onclick="navigate('library')">学校库</a><a class="nav-link" id="nav-apply" data-r="apply" onclick="navigate('apply')">申请</a><a class="nav-link" id="nav-map" data-r="map" onclick="navigate('map')">地图</a><a class="nav-link" id="nav-match" data-r="match" onclick="navigate('match')" style="color:#F0D9A8">✨ AI选校</a><a class="nav-link" id="nav-hsrank" data-r="hsrank" onclick="navigate('hsrank')">高中榜</a><a class="nav-link" id="nav-cases" data-r="cases" onclick="navigate('cases')">案例库</a><a class="nav-link" id="nav-essays" data-r="essays" onclick="navigate('essays')">文书</a><a class="nav-link" id="nav-ask" data-r="ask" onclick="navigate('ask')">问答</a><a class="nav-link" id="nav-roi" data-r="roi" onclick="navigate('roi')">计算器</a><a class="nav-link" id="nav-fav" data-r="fav" onclick="navigate('fav')">⭐ 我的清单</a><a class="nav-link" id="nav-forum" data-r="forum" onclick="navigate('forum')">💬 论坛</a><a class="nav-link" id="nav-admin" data-r="admin" onclick="navigate('admin')" style="display:none;color:#F0D9A8">🛡 管理</a><a class="nav-link" id="nav-about" data-r="about" onclick="navigate('about')">关于</a></div><div class="nav-right"><a class="nav-link" id="nav-auth" data-r="auth" onclick="navAuthClick()" style="color:#F0D9A8;font-weight:700">👤 登录/注册</a><button class="nav-search-btn nav-bell" id="nav-bell" onclick="navigate('notifications')" title="通知 · Notifications" style="display:inline-flex;align-items:center;justify-content:center">🔔<span class="bell-bdg" id="bell-bdg" style="display:none">0</span></button><button class="nav-search-btn" onclick="navigate('library')">🔍</button><button class="lang-toggle" onclick="toggleLang()">中 / En</button></div></div></nav>
+<nav class="navbar"><div class="wrap"><div class="brand" onclick="navigate('home')"><div class="brand-mark">U</div><div class="brand-text">UniVeritas<small id="brand-sub">学府真鉴</small></div></div><div class="nav-links"><a class="nav-link active" id="nav-home" data-r="home" onclick="navigate('home')">首页</a><a class="nav-link" id="nav-library" data-r="library" onclick="navigate('library')">学校库</a><a class="nav-link" id="nav-apply" data-r="apply" onclick="navigate('apply')">申请</a><a class="nav-link" id="nav-map" data-r="map" onclick="navigate('map')">地图</a><a class="nav-link" id="nav-match" data-r="match" onclick="navigate('match')" style="color:#F0D9A8">✨ AI选校</a><a class="nav-link" id="nav-hsrank" data-r="hsrank" onclick="navigate('hsrank')">高中榜</a><a class="nav-link" id="nav-cases" data-r="cases" onclick="navigate('cases')">案例库</a><a class="nav-link" id="nav-essays" data-r="essays" onclick="navigate('essays')">文书</a><a class="nav-link" id="nav-roi" data-r="roi" onclick="navigate('roi')">计算器</a><a class="nav-link" id="nav-fav" data-r="fav" onclick="navigate('fav')">⭐ 我的清单</a><a class="nav-link" id="nav-admin" data-r="admin" onclick="navigate('admin')" style="display:none;color:#F0D9A8">🛡 管理</a><a class="nav-link" id="nav-about" data-r="about" onclick="navigate('about')">关于</a></div><div class="nav-right"><a class="nav-link" id="nav-auth" data-r="auth" onclick="navAuthClick()" style="color:#F0D9A8;font-weight:700">👤 登录/注册</a><button class="nav-search-btn nav-bell" id="nav-bell" onclick="navigate('notifications')" title="通知 · Notifications" style="display:inline-flex;align-items:center;justify-content:center">🔔<span class="bell-bdg" id="bell-bdg" style="display:none">0</span></button><button class="nav-search-btn" onclick="navigate('library')">🔍</button><button class="lang-toggle" onclick="toggleLang()">中 / En</button></div></div></nav>
 <nav class="tabbar" id="tabbar">
   <div class="tb" data-r="home" onclick="navigate('home')"><span class="ti">🏠</span><span id="tb-home">首页</span></div>
   <div class="tb" data-r="library" onclick="navigate('library')"><span class="ti">🏛️</span><span id="tb-library">学校库</span></div>
@@ -4933,7 +4933,7 @@ paintFooterExtra();
 
 function toggleLang(){
   LANG=LANG==='zh'?'en':'zh';
-  const nav={home:['首页','Home'],library:['学校库','Universities'],apply:['申请','Apply'],match:['✨ AI选校','✨ AI Match'],hsrank:['高中榜','HS Rank'],cases:['案例库','Cases'],ask:['问答','Q&A'],roi:['计算器','ROI Calc'],fav:['⭐ 我的清单','⭐ My List'],map:['地图','Map'],essays:['文书','Essays'],forum:['💬 论坛','💬 Forum'],about:['关于','About']};
+  const nav={home:['首页','Home'],library:['学校库','Universities'],apply:['申请','Apply'],match:['✨ AI选校','✨ AI Match'],hsrank:['高中榜','HS Rank'],cases:['案例库','Cases'],roi:['计算器','ROI Calc'],fav:['⭐ 我的清单','⭐ My List'],map:['地图','Map'],essays:['文书','Essays'],about:['关于','About']};
   Object.entries(nav).forEach(([k,[zh,en]])=>{const el=document.getElementById('nav-'+k);if(el)el.textContent=LANG==='en'?en:zh;});
   try{ paintNavAuth(); }catch(e){}
   const bs=document.getElementById('brand-sub'); if(bs) bs.textContent=LANG==='en'?'Veritas':'学府真鉴';
@@ -5754,46 +5754,6 @@ function readAllNotifs(){
     toast(L('已全部标为已读','All marked as read'));
   }
 }
-/* ---- 贡献榜 ---- */
-let lbRange='all';
-function setLbRange(r){ lbRange=(r==='week'?'week':'all'); renderLeaderboard(); }
-function renderLeaderboard(){
-  app.innerHTML=`<div class="wrap" style="padding-top:36px;padding-bottom:70px;max-width:760px">
-    <h1 class="pg-h1" style="font-family:'Noto Serif SC',serif;font-size:32px;font-weight:800;margin-bottom:8px">🏆 ${L('贡献榜','Leaderboard')}</h1>
-    <p style="font-size:13.5px;color:var(--text-soft);margin-bottom:18px">${L('签到、发帖、评论、收藏都能积累 XP —— 上榜的都是真鉴贡献者','Check-ins, posts, comments and saves all earn XP')}</p>
-    <div class="cur-chips">
-      <button class="cur-chip${lbRange==='all'?' on':''}" onclick="setLbRange('all')">${L('总榜','All-time')}</button>
-      <button class="cur-chip${lbRange==='week'?' on':''}" onclick="setLbRange('week')">${L('周榜','This week')}</button>
-    </div>
-    <div id="lb-list"><div style="text-align:center;color:#A9A49A;font-size:13px;padding:40px 0">${L('加载中…','Loading…')}</div></div>
-  </div>`;
-  const box=document.getElementById('lb-list');
-  if(window.__apiOn){
-    uvApi('/api/growth/leaderboard?range='+lbRange).then(rows=>paintLb(rows||[])).catch(()=>{ if(box) box.innerHTML=`<div style="text-align:center;color:#A9A49A;font-size:13px;padding:40px 0">${L('加载失败，请稍后再试','Failed to load — please retry')}</div>`; });
-  }else{
-    const u=currentUser();
-    if(u){
-      const gv=growthView();
-      paintLb([{phone:maskPhone(u.phone),xp:gv.xp,level:gv.level,levelName:gv.levelName}]);
-      box.insertAdjacentHTML('beforeend',`<div style="text-align:center;font-size:12px;color:#A9A49A;margin-top:16px;line-height:1.8">${L('📴 离线演示模式 · 仅显示本机数据<br>上线后查看全站榜','📴 Offline demo — local data only<br>Go online to see the global leaderboard')}</div>`);
-    }else{
-      box.innerHTML=`<div class="empty" style="padding:50px 20px"><div class="ic">🏆</div><h3 style="font-family:'Noto Serif SC',serif;font-size:19px">${L('离线演示模式','Offline demo mode')}</h3><p style="font-size:13px;margin-top:8px">${L('登录后查看你的本地排名；上线后查看全站榜','Sign in to see your local rank; go online for the global board')}</p><span class="post-act" style="color:#800000;font-size:13.5px" onclick="navigate('auth')">${L('去登录 →','Sign in →')}</span></div>`;
-    }
-  }
-}
-function paintLb(rows){
-  const box=document.getElementById('lb-list'); if(!box) return;
-  if(!rows.length){ box.innerHTML=`<div style="text-align:center;color:#A9A49A;font-size:13px;padding:40px 0">${L('暂时无人上榜','No entries yet')}</div>`; return; }
-  box.innerHTML=rows.map((r,i)=>{
-    const lv=LEVELS.find(x=>x.lv===r.level)||lvlOf(r.xp||0);
-    return `<div class="lb-row">
-    <span class="lb-rank${i<3?' top':''}">${i+1}</span>
-    <span class="lv-chip" style="margin-left:0;font-size:11px;padding:3px 10px">Lv.${lv.lv} ${esc(L(lv.name,lv.en))}</span>
-    <span style="font-weight:700;color:#3d3a34;font-size:13.5px">${esc(r.phone)}</span>
-    <span style="margin-left:auto;font-family:'Noto Serif SC',serif;font-weight:800;color:#800000;font-size:16px">${lbRange==='week'&&r.gained!=null?('+'+r.gained):(r.xp||0)}<span style="font-size:11px;color:#A9A49A;font-weight:600"> XP${lbRange==='week'&&r.gained!=null?L(' / 本周',' / week'):''}</span></span>
-  </div>`;}).join('');
-}
-
 /* ---- v16 短信验证码（服务器模式；SMS_PROVIDER=console 时 devCode 自动填入并提示） ---- */
 function startCodeCountdown(btn,sec){
   let left=sec||60; btn.disabled=true; btn.textContent=left+'s';
@@ -6136,7 +6096,7 @@ function renderAuth(){
         <div class="f-row"><label class="f-label">${L('手机号','Phone number')}</label>
           <input class="f-input" id="rg-phone" type="tel" maxlength="16" placeholder="${L('11 位手机号或 +国际号','11-digit mobile or +intl number')}"></div>
         <div class="f-row"><label class="f-label">${L('昵称（选填）','Nickname (optional)')}</label>
-          <input class="f-input" id="rg-nick" maxlength="12" placeholder="${L('在社区中展示的名字，12 字以内','Shown in the community (max 12 chars)')}"></div>
+          <input class="f-input" id="rg-nick" maxlength="12" placeholder="${L('用于展示的昵称，12 字以内','Display name (max 12 chars)')}"></div>
         <div class="f-row"><label class="f-label">${L('密码','Password')}</label>
           <input class="f-input" id="rg-pwd" type="password" maxlength="128" placeholder="${L('至少 8 位，含字母和数字','8+ chars with letters & digits')}" oninput="paintPwBar()">
           <div id="pw-bar" style="height:5px;background:#F0EBE2;border-radius:99px;margin-top:8px;overflow:hidden"></div>
@@ -6170,7 +6130,7 @@ function renderAuth(){
         <div class="f-row"><label class="f-label">${L('手机号','Phone number')}</label>
           <input class="f-input" id="rg-phone" type="tel" maxlength="11" placeholder="${L('请输入 11 位手机号','11-digit mobile number')}"></div>
         <div class="f-row"><label class="f-label">${L('昵称','Nickname')}</label>
-          <input class="f-input" id="rg-nick" maxlength="12" placeholder="${L('在社区中展示的名字，12 字以内','Shown in the community (max 12 chars)')}"></div>
+          <input class="f-input" id="rg-nick" maxlength="12" placeholder="${L('用于展示的昵称，12 字以内','Display name (max 12 chars)')}"></div>
         <div class="f-row"><label class="f-label">${L('密码','Password')}</label>
           <input class="f-input" id="rg-pwd" type="password" placeholder="${L('至少 6 位','At least 6 characters')}"></div>
         <div class="f-row"><label class="f-label">${L('短信验证码','SMS code')}</label>
@@ -6208,7 +6168,7 @@ function renderMe(){
   if(!u){ navigate('auth'); return; }
   const srv=window.__apiOn;
   const favs=getFav().length;
-  const posts=srv?(forumMyPosts||[]):getPosts().filter(p=>p.phone===u.phone);
+
   const logs=getLog().slice(0,10);
   const regDate=new Date(u.ts||Date.now());
   const dateStr=regDate.getFullYear()+'/'+(regDate.getMonth()+1)+'/'+regDate.getDate();
@@ -6262,18 +6222,6 @@ function renderMe(){
           </div>
           <div style="font-size:12px;color:#A9A49A;margin-top:8px">${L('收藏已绑定当前账户，退出后游客清单互不影响','Saved to this account — the guest list stays separate')}</div>
         </div>
-        <div class="me-card" style="cursor:pointer;margin-top:16px" onclick="navigate('forum')">
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div style="font-size:13px;font-weight:800;color:#8a6d2f">${L('💬 去论坛逛逛','💬 Visit the Forum')}</div>
-            <div style="font-size:26px;color:#D4AF37">→</div>
-          </div>
-        </div>
-        <div class="me-card" style="cursor:pointer;margin-top:16px" onclick="navigate('leaderboard')">
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div style="font-size:13px;font-weight:800;color:#8a6d2f">${L('🏆 贡献榜','🏆 Leaderboard')}</div>
-            <div style="font-size:26px;color:#D4AF37">→</div>
-          </div>
-        </div>
         ${isAdminUser()?`<div class="me-card" style="cursor:pointer;margin-top:16px;border:1.5px solid #D4AF37" onclick="navigate('admin')">
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div style="font-size:13px;font-weight:800;color:#800000">${L('🛡 管理后台','🛡 Admin Console')}</div>
@@ -6284,22 +6232,6 @@ function renderMe(){
       <div>
         ${renderListSection()}
         ${renderTimelineSection()}
-        <div class="me-card" style="margin-bottom:16px">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-            <div style="font-size:15px;font-weight:800">${L('📝 我的帖子','📝 My Posts')}<span style="color:#A9A49A;font-weight:400;font-size:12px">（${posts.length}）</span></div>
-            <span class="post-act" onclick="navigate('forum',{compose:1})">${L('＋ 发新帖','＋ New post')}</span>
-          </div>
-          <div id="me-posts">
-          ${srv&&forumMyPosts===null?`<div style="font-size:13px;color:#A9A49A;padding:16px 0;text-align:center">${L('正在从服务器加载…','Loading from server…')}</div>`
-          :posts.length?posts.map(p=>`<div style="border-top:1px dashed #EFE9DE;padding:11px 0;display:flex;align-items:center;gap:12px">
-            <div style="flex:1;min-width:0">
-              <div class="post-title" style="font-size:15px" onclick="navigate('forum',{post:'${p.id}'})">${esc(p.title)}</div>
-              <div style="font-size:11.5px;color:#A9A49A;margin-top:4px">${fmtTime(p.ts)} · ${L('评论','comments')} ${p.comments.length} · ${L('举报','reports')} ${p.reports||0}${p.audit==='hold'?` · <span style="color:#B45309;font-weight:700">${L('待审隐藏中','hidden pending review')}</span>`:''}</div>
-            </div>
-            ${srv?'':`<span class="post-act" style="color:#9f1239" onclick="delPost('${p.id}')">${L('删除','Delete')}</span>`}
-          </div>`).join(''):`<div style="font-size:13px;color:#A9A49A;padding:16px 0;text-align:center">${L('还没有发帖，去论坛分享你的选校经验吧','No posts yet — share your experience on the forum')}</div>`}
-          </div>
-        </div>
         <div class="me-card">
           <div style="font-size:15px;font-weight:800;margin-bottom:12px">${L('🕘 最近操作','🕘 Recent Activity')}</div>
           ${logs.length?logs.map(l=>`<div style="font-size:12.5px;color:#6b655c;padding:6px 0;border-bottom:1px dashed #F3EEE5;display:flex;justify-content:space-between;gap:10px"><span>${esc(l.msg)}</span><span style="color:#bbb;flex-shrink:0;font-size:11px">${fmtTime(l.t)}</span></div>`).join(''):`<div style="font-size:13px;color:#A9A49A;padding:10px 0">${L('暂无记录','No activity yet')}</div>`}
@@ -6307,7 +6239,7 @@ function renderMe(){
       </div>
     </div>
   </div>`;
-  if(srv&&forumMyPosts===null) loadMyPosts(u.phone);
+
 }
 
 /* ===== v11.12 收藏清单（localStorage · v12 起按账户隔离） ===== */
@@ -6964,217 +6896,6 @@ function renderHsRank(){
   if(_rq) refocusAfterRender('hs-q');
 }
 
-/* ===================== v11.13 真鉴问答（真实评价检索式回答） ===================== */
-
-
-function askFupL(f){
-  if(LANG!=='en') return f;
-  let m;
-  if(m=f.match(/^(.+) 哪所大学录取最多$/)) return 'Which universities admit the most from '+m[1]+'?';
-  if(m=f.match(/^(\d{4}) 届申请截止时间$/)) return 'Class of '+m[1]+' deadlines';
-  if(m=f.match(/^和 (.+) 类似的学校$/)) return 'Schools similar to '+m[1];
-  if(m=f.match(/^(.+)留学一年多少钱$/)) return 'Yearly cost in '+m[1]+'?';
-  if(f==='回国认可度最高的大学') return 'Most recognized universities back in China';
-  if(f==='奖学金好拿吗') return 'Are scholarships easy to get?';
-  if(f==='ED 和 RD 有什么区别') return 'ED vs RD — what is the difference?';
-  if(f==='牛津剑桥什么时候截止') return 'Oxbridge deadlines';
-  if(f==='UC 系申请时间') return 'UC application timeline';
-  if(m=f.match(/^(.+) 学费多少$/)) return m[1]+' tuition?';
-  if(m=f.match(/^(.+) 就业怎么样$/)) return m[1]+' careers?';
-  if(m=f.match(/^(.+) 申请难度$/)) return 'How hard is '+m[1]+'?';
-  if(f==='就业对比') return 'Career comparison';
-  if(m=f.match(/^(.+) 哪个贵$/)) return 'Which is pricier?';
-  if(m=f.match(/^(.+) 费用$/)) return m[1]+' costs';
-  if(m=f.match(/^(.+) 就业$/)) return m[1]+' careers';
-  if(m=f.match(/^(.+) 录取案例$/)) return m[1]+' admission cases';
-  if(f==='哪个大学食堂好吃') return 'Best campus food?';
-  if(f==='英国G5 回国认可度') return 'UK G5 recognition in China';
-  if(f==='宿舍条件好的学校') return 'Schools with good dorms';
-  return f;
-}
-
-
-function askIndex(){
-  if(window.__askIdx) return window.__askIdx;
-  const idx=[];
-  UNIS.forEach(u=>{ const d=getModules(u); const rvs=(d&&d.reviews)||[];
-    rvs.forEach(r=>{ idx.push({uid:u.id, uname:u.name, uen:u.nameEn, t:((r.title||'')+' '+(r.text||'')+' '+(r.major||'')+' '+(r.degree||'')).toLowerCase(), r}); });
-  });
-  window.__askIdx=idx; return idx;
-}
-function askDetectSchools(q){
-  const ql=q.toLowerCase(); const found=[];
-  UNIS.forEach(u=>{
-    const names=[u.name,u.nameEn];
-    const short=(u.name||'').replace(/(大学|学院|理工学院|大学学院|分校|校区)$/,'');
-    if(short.length>=2&&short!==u.name) names.push(short);
-    const enFirst=(u.nameEn||'').split(' ')[0];
-    if(enFirst.length>=4) names.push(enFirst);
-    for(const n of names){ if(n&&n.length>=2&&ql.includes(n.toLowerCase())){ if(!found.some(f=>f.uid===u.id)) found.push({uid:u.id,len:n.length}); break; } }
-  });
-  return found.sort((a,b)=>b.len-a.len).slice(0,3).map(f=>f.uid);
-}
-function askDetectHS(q){
-  if(typeof HSRANK==='undefined') return null;
-  let best=null;
-  HSRANK.forEach(s=>{
-    const names=[s.name];
-    const short=s.name.replace(/(国际部|国际学校|国际课程中心|双语学校|学校|中学|高中|（.*）|\(.*\))/g,'');
-    if(short.length>=2) names.push(short);
-    for(const n of names){ if(n&&q.includes(n)&&n.length>=2){ if(!best||n.length>best.len) best={name:s.name,len:n.length}; } }
-  });
-  return best?best.name:null;
-}
-function askCats(q){ const ql=q.toLowerCase(); return Object.keys(ASK_CATS).filter(c=>ASK_CATS[c].some(k=>ql.includes(k))); }
-function askToks(q){
-  let toks=q.toLowerCase().replace(/[？?！!,，。.、：:;；\s]+/g,' ').split(' ').filter(t=>t.length>=2);
-  const extra=[]; toks.forEach(t=>{ Object.keys(ASK_SYN).forEach(k=>{ if(t.includes(k)) extra.push(...ASK_SYN[k]); }); });
-  return [...new Set([...toks,...extra])];
-}
-function askScoreReviews(uids,cats,toks,limit){
-  const idx=askIndex(); const uid=uids[0]||null;
-  const scored=idx.map(e=>{
-    let s=0;
-    if(uids.length){ if(uids.includes(e.uid)) s+=5+(uids.length-uids.indexOf(e.uid))*0.1; else s-=100; }
-    cats.forEach(c=>{ if(ASK_CATS[c].some(k=>e.t.includes(k))) s+=3; });
-    toks.forEach(t=>{ if(e.t.includes(t)) s+=1; });
-    if(e.r.url) s+=0.5;
-    return {e,s};
-  }).filter(x=>x.s>=(uids.length?5:2)).sort((a,b)=>b.s-a.s).slice(0,limit);
-  return scored.map(x=>x.e);
-}
-function askKeySentences(hits,cats,toks,maxN){
-  const out=[]; const seen=new Set();
-  const kws=[...cats.flatMap(c=>ASK_CATS[c]),...toks];
-  for(const h of hits){
-    const sents=(h.r.text||'').split(/[。！？!；;\n]/).map(s=>s.trim()).filter(s=>s.length>=12&&s.length<=90);
-    for(const st of sents){
-      const key=st.slice(0,20); if(seen.has(key)) continue;
-      const hit=kws.filter(k=>st.toLowerCase().includes(k.toLowerCase())).length;
-      if(hit>=1){ seen.add(key); out.push({t:st,from:h.uname,hit}); }
-      if(out.length>=maxN*3) break;
-    }
-    if(out.length>=maxN*3) break;
-  }
-  return out.sort((a,b)=>b.hit-a.hit).slice(0,maxN);
-}
-function askAnswer(q){
-  const rgL=rg=>L(rg,{'美国':'US','英国':'UK','加拿大':'Canada','澳大利亚':'Australia','中国香港':'Hong Kong','新加坡':'Singapore','其他':'Other'}[rg]||rg);
-  let uids=askDetectSchools(q); const cats=askCats(q); const toks=askToks(q);
-  const hs=askDetectHS(q);
-  if(hs) uids=uids.filter(id=>{ const u=UNIS.find(x=>x.id===id); return !(u&&hs.includes(u.name.replace(/(大学|学院)$/,''))); });
-  const ql=q.toLowerCase();
-  // 意图：高中 OFFER 去向
-  if(hs&&typeof HS_DETAIL!=='undefined'&&HS_DETAIL[hs]){
-    const d=HS_DETAIL[hs]; const years=Object.keys(d).filter(k=>/^\d{4}$/.test(k)).sort().reverse();
-    const y=years[0]; const regions=d[y]||{};
-    let tot=0; const lines=[];
-    Object.entries(regions).forEach(([rg,arr])=>{ const n=arr.reduce((s,o)=>s+o.n,0); tot+=n; const top=arr.filter(o=>!o.agg).slice(0,4).map(o=>o.u+' '+o.n+L(' 枚','')).join(LANG==='en'?', ':'、'); if(top) lines.push('<b>'+rgL(rg)+'</b>'+L('（'+n+' 枚）：',' ('+n+' offers): ')+top); });
-    const oby=d.offersByYear||{}; if(oby[y]) tot=oby[y];
-    const caseN=(typeof CASES!=='undefined')?CASES.filter(c=>c.hs===hs).length:0;
-    return {type:'hs', uids, cats, hs,
-      synth:L(`根据站内升学大数据，<b>${hs}</b> ${y} 届共收获 OFFER <b>${tot}</b> 枚${years.length>1?'（另有 '+years.slice(1).join('、')+' 届完整明细）':''}：<br>${lines.slice(0,5).join('<br>')}${caseN?`<br>📌 另有 <b>${caseN}</b> 条同校实名录取案例可查。`:''}`, `Per verified admissions data, <b>${hs}</b> received <b>${tot}</b> offers for the Class of ${y}${years.length>1?' (full details also for '+years.slice(1).join(', ')+')':''}:<br>${lines.slice(0,5).join('<br>')}${caseN?`<br>📌 Plus <b>${caseN}</b> named admission cases from this school.`:''}`),
-      hits:askScoreReviews([],cats,toks,3),
-      followups:[hs+' 哪所大学录取最多','2026 届申请截止时间','和 '+hs+' 类似的学校']};
-  }
-  // 意图：费用/ROI
-  if(/学费|费用|生活费|多少钱|花费|开销|roi|回本|起薪|薪资/.test(ql)&&!uids.length){
-    const R=(typeof ROI_DATA!=='undefined')?ROI_DATA:null;
-    if(R){
-      const rg=/英国|uk/.test(ql)?'uk':/香港|港/.test(ql)?'hk':/新加坡|新/.test(ql)?'sg':/澳/.test(ql)?'au':/加/.test(ql)?'ca':'us';
-      const rgN=L({us:'美国',uk:'英国',hk:'中国香港',sg:'新加坡',au:'澳大利亚',ca:'加拿大'}[rg],{us:'the US',uk:'the UK',hk:'Hong Kong',sg:'Singapore',au:'Australia',ca:'Canada'}[rg]);
-      return {type:'cost', uids, cats,
-        synth:L(`<b>${rgN}本科留学账本</b>（站内 ROI 计算器口径，数据来源 NACE/High Fliers/UGC/MOE/QILT/StatCan 等官方统计）：学费+生活费因校因城差异大，建议用 ROI 计算器按你的专业精确算——它给出「总投入 vs 回国起薪 vs 留当地起薪」三口径对照。`,`<b>The real cost of undergrad in ${rgN}</b> (ROI calculator basis; sources: NACE / High Fliers / UGC / MOE / QILT / StatCan): tuition + living vary widely by school and city — use the ROI calculator with your major for a precise three-way comparison: total investment vs return-to-China starting salary vs local starting salary.`),
-        hits:askScoreReviews([],cats,toks,3),
-        cta:{t:L('打开 ROI 计算器 →','Open the ROI Calculator →'),r:'roi'},
-        followups:[''+rgN+'留学一年多少钱','回国认可度最高的大学','奖学金好拿吗']};
-    }
-  }
-  // 意图：截止日期
-  if(/截止|deadline|什么时候申请|申请时间|早申|ed|ea|rd/.test(ql)&&typeof nextDeadlines==='function'){
-    const dl=nextDeadlines().slice(0,5);
-    return {type:'deadline', uids, cats,
-      synth:L('<b>最近的关键申请截止</b>（自动按今天日期推算）：<br>','<b>Upcoming key application deadlines</b> (auto-computed from today):<br>')+dl.map(d=>'<b>'+d.label+'</b>: '+d.date+L('（还剩 '+d.days+' 天）',' ('+d.days+' days left)')).join('<br>'),
-      hits:askScoreReviews(uids,cats,toks,3),
-      followups:['ED 和 RD 有什么区别','牛津剑桥什么时候截止','UC 系申请时间']};
-  }
-  // 意图：录取案例（谁能去 / 什么背景能去 X）
-  if(uids.length&&/谁能|案例|背景|什么水平|录取|能去|进得去/.test(ql)&&typeof CASES!=='undefined'){
-    const u0=UNIS.find(x=>x.id===uids[0]);
-    const rel=CASES.filter(c=>c.uni.includes(u0.name)||u0.name.includes(c.uni));
-    if(rel.length){
-      const lines=rel.slice(0,6).map(c=>`${c.hs} → <b>${c.round==='不适用'?L('常规批','Regular'):c.round}</b>${L('（'+c.year+' 届）',' (Class of '+c.year+')')}`);
-      return {type:'case', uids, cats,
-        synth:L(`站内收录 <b>${u0.name}</b> 的国内高中真实录取案例 <b>${rel.length}</b> 条：<br>${lines.join('<br>')}${rel.length>6?'<br>…等 '+rel.length+' 条，全部可溯源':''}`,`We hold <b>${rel.length}</b> verified domestic high-school admission cases for <b>${u0.name}</b>:<br>${lines.join('<br>')}${rel.length>6?'<br>…'+rel.length+' in total, all traceable':''}`),
-        hits:askScoreReviews(uids,cats,toks,3),
-        cta:{t:L('打开国内录取案例库 →','Open the Domestic Cases Library →'),r:'cases'},
-        followups:[''+u0.name+' 学费多少',''+u0.name+' 就业怎么样',''+u0.name+' 申请难度']};
-    }
-  }
-  // 意图：多校对比
-  if(uids.length>=2){
-    const parts=uids.map(id=>{ const u=UNIS.find(x=>x.id===id); const cnt=askIndex().filter(e=>e.uid===id).length; return `<b>${uniName(u)}</b>${L('（QS '+(u.qs||'—')+' · '+u.city+' · 站内评价 '+cnt+' 条）',' (QS '+(u.qs||'—')+' · '+(CITY_EN[u.city]||u.city)+' · '+cnt+' reviews)')}`; });
-    return {type:'compare', uids, cats,
-      synth:L('<b>同场对照</b>：<br>','<b>Side-by-side</b>:<br>')+parts.join('<br>')+L('<br>下方为两校相关真实评价摘录，更多维度可用学校库的「加入对比」功能拉表。','<br>Relevant verified reviews below; for more dimensions use "Compare" in the school library.'),
-      hits:askScoreReviews(uids,cats,toks,6),
-      followups:[uids.map(id=>UNIS.find(x=>x.id===id).name).join(' 和 ')+' 哪个贵','就业对比']};
-  }
-  // 默认：评价检索 + 要点合成
-  const hits=askScoreReviews(uids,cats,toks,uids.length?6:6);
-  const sents=askKeySentences(hits,cats,toks,4);
-  const u0=uids.length?UNIS.find(x=>x.id===uids[0]):null;
-  const synth= sents.length? L(`综合站内 <b>${u0?hits.filter(h=>h.uid===u0.id).length+' 条 '+u0.name:'相关'}</b> 真实评价，大家提到最多的是：<br>`,`Across <b>${u0?hits.filter(h=>h.uid===u0.id).length+' verified reviews of '+u0.name:'relevant verified reviews'}</b>, the most-mentioned points:<br>`)+sents.map((s,i)=>'<b>'+'①②③④⑤'[i]+'</b> '+s.t+'<span style="color:#a89f8f;font-size:11px">（'+s.from+'）</span>').join('<br>') : '';
-  return {type:'review', uids, cats, synth, hits,
-    followups:(u0?[u0.name+' 费用',u0.name+' 就业',u0.name+' 录取案例']:['哪个大学食堂好吃','英国G5 回国认可度','宿舍条件好的学校'])};
-}
-function renderAsk(){
-  app.innerHTML=`<div class="wrap" style="padding-top:36px;padding-bottom:64px;max-width:820px">
-    <div style="text-align:center;margin-bottom:24px">
-      <div style="display:inline-block;padding:6px 18px;border-radius:999px;background:linear-gradient(135deg,#8C1515,#800000);color:#F3E5C3;font-size:11px;font-weight:700;letter-spacing:2px;margin-bottom:14px">VERIFIED ANSWERS · ${L('每条引用可溯源','Every citation traceable')}</div>
-      <h1 class="pg-h1" style="font-family:'Noto Serif SC',serif;font-size:36px;font-weight:800">${L('🧠 真鉴问答','🧠 UniVeritas Answers')}</h1>
-      <p style="font-size:13.5px;color:var(--text-soft);margin-top:10px;line-height:1.7">${L('真鉴智能引擎同时调取站内 <b>2200+ 条真实评价、'+CASES.length+' 条国内录取案例、六年 OFFER 大数据与费用数据库</b>，先给综合分析、再给可溯源引用 —— 不编观点，每条结论都能点进原文核对。','The engine draws on <b>2,200+ verified reviews, '+CASES.length+' domestic admission cases, six years of OFFER data and the cost database</b> — synthesis first, then traceable citations. No made-up opinions: every conclusion links back to its source.')}</p>
-    </div>
-    <div style="display:flex;gap:9px">
-      <input id="ask-q" placeholder="${L('问点什么：十一学校 offer / 布朗录取案例 / 美本费用 / 截止时间 / 斯坦福就业…','Ask anything: offers / cases / costs / deadlines / careers…')}" onkeydown="if(event.key==='Enter')doAsk()" style="flex:1;font-size:15px;padding:13px 16px;border:1.5px solid #E0D8C8;border-radius:13px;background:#fff;box-sizing:border-box">
-      <button onclick="doAsk()" style="padding:0 22px;border:none;border-radius:13px;background:linear-gradient(135deg,#8C1515,#6B0F0F);color:#fff;font-size:15px;font-weight:700;cursor:pointer">${L('提问','Ask')}</button>
-    </div>
-    <div class="ask-chips" style="display:flex;gap:7px;flex-wrap:wrap;margin-top:12px">
-      ${[['北京市十一学校国际部 offer 情况','Offers from Beijing National Day School'],['谁能去布朗大学','Who gets into Brown?'],['美国留学一年多少钱','Yearly cost in the US'],['申请截止时间','Application deadlines'],['斯坦福和耶鲁哪个好','Stanford vs Yale'],['斯坦福 CS 就业怎么样','Stanford CS careers']].map(s=>`<span onclick="document.getElementById('ask-q').value='${s[0]}';doAsk()" style="cursor:pointer;font-size:11.5px;padding:5px 12px;border-radius:999px;background:#fff;border:1px solid #E5DDCB;color:#7a6a45;user-select:none">${L(s[0],s[1])}</span>`).join('')}
-    </div>
-    <div id="ask-out" style="margin-top:26px"></div>
-    <div style="text-align:center;font-size:11.5px;color:var(--text-muted);margin-top:34px;line-height:1.8">${L('不做排名，只做真相 · 每条数据标注来源 · 绝不编造','No rankings, only truth · Every datum sourced · Never fabricated')}</div>
-  </div>`;
-}
-function doAsk(){
-  const q=(document.getElementById('ask-q').value||'').trim(); if(!q) return;
-  const out=document.getElementById('ask-out');
-  const t0=Date.now();
-  const ans=askAnswer(q);
-  if(!ans.hits.length&&!ans.synth){ out.innerHTML=`<div style="text-align:center;padding:44px 20px;background:#fff;border:1px dashed #E3D9C6;border-radius:14px;color:#8a857c"><div style="font-size:38px">🤔</div><p style="margin-top:10px;font-size:13.5px">${L('站内还没有足够相关的真实数据 —— 换个问法，或点名具体学校/高中试试','Not enough relevant verified data yet — rephrase, or name a specific university / high school')}</p></div>`; return; }
-  const u=ans.uids.length?UNIS.find(x=>x.id===ans.uids[0]):null;
-  out.innerHTML=`<div style="font-size:12.5px;color:#8a857c;margin-bottom:12px">${L('真鉴智能引擎 · 综合 '+askIndex().length+' 条评价 + '+CASES.length+' 条国内案例 + 升学大数据','UniVeritas Engine · '+(askIndex().length).toLocaleString()+' reviews + '+CASES.length+' domestic cases + admissions big data')}（${Date.now()-t0}ms）${u?' · '+L('锁定：','Focused: ')+uniName(u):''}${ans.cats.length?' · '+L('主题：','Topics: ')+ans.cats.map(c=>L(c,ASK_CATS_EN[c]||c)).join(LANG==='en'?', ':'、'):''}</div>
-  ${ans.synth?`<div style="background:linear-gradient(160deg,#FFFDF6,#FBF6EA);border:1.5px solid #E8DCC0;border-radius:16px;padding:17px 18px;margin-bottom:16px">
-    <div style="display:flex;align-items:center;gap:7px;margin-bottom:9px"><span style="font-size:15px">🧠</span><span style="font-family:'Noto Serif SC',serif;font-weight:800;font-size:14.5px;color:#5C4400">${L('真鉴引擎 · 综合分析','UniVeritas Engine · Synthesis')}</span><span style="font-size:9.5px;color:#B8860B;background:rgba(212,175,55,.14);padding:2px 8px;border-radius:999px;font-weight:700">${L('每条结论可溯源','Traceable')}</span></div>
-    <div style="font-size:13.5px;line-height:1.85;color:#3d3a36">${ans.synth}</div>
-    ${ans.cta?`<div style="margin-top:11px"><span onclick="navigate('${ans.cta.r}')" style="cursor:pointer;font-size:12.5px;font-weight:800;color:#8C1515">${ans.cta.t}</span></div>`:''}
-    ${ans.type==='hs'&&ans.hs?`<div style="margin-top:6px"><span onclick="hsOfferDetail('${ans.hs.replace(/'/g,"\\'")}',event)" style="cursor:pointer;font-size:12.5px;font-weight:800;color:#8C1515">${L('查看 '+ans.hs+' 六年 OFFER 明细 →','View six-year OFFER details →')}</span></div>`:''}
-  </div>`:''}
-  ${ans.hits.map(h=>{ const r=h.r; const snip=(r.text||'').slice(0,150);
-    return `<div style="background:#fff;border:1px solid #EAE4D8;border-radius:14px;padding:15px 16px;margin-bottom:11px">
-      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px">
-        <span style="cursor:pointer;font-family:'Noto Serif SC',serif;font-weight:800;font-size:14.5px;color:#8C1515" onclick="navigate('uni',{id:'${h.uid}'})">${h.uname} ›</span>
-        <span style="font-size:10.5px;padding:2px 8px;border-radius:999px;background:var(--bg);border:1px solid #EAE5DE;color:#777">${degL(r.degree||'')} · ${r.major?hlL(r.major):L('专业未注明','Major n/a')}</span>
-        <span style="font-size:10.5px;color:#aaa">${r.type||''} · ${r.year||''}</span>
-      </div>
-      <div style="font-size:13.5px;line-height:1.75;color:#3d3a36">${snip}${(r.text||'').length>150?'…':''}</div>
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:9px">
-        <span style="font-size:11px;color:#9a938a">${L('来源：','Source: ')}${r.source||L('未知','n/a')} · ${r.author||L('匿名','Anon')}</span>
-        ${r.url?`<a href="${fixUrl(r.url)}" target="_blank" rel="noopener" style="font-size:11px;font-weight:700;color:#B8860B">${L('查看原文 ↗','Original ↗')}</a>`:''}
-      </div>
-    </div>`;}).join('')}
-  ${ans.followups?`<div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:14px"><span style="font-size:11px;color:#a89f8f;line-height:2">${L('追问：','Follow-ups: ')}</span>${ans.followups.map(f=>`<span onclick="document.getElementById('ask-q').value='${f}';doAsk()" style="cursor:pointer;font-size:11.5px;padding:5px 12px;border-radius:999px;background:#fff;border:1px solid #E5DDCB;color:#7a6a45;user-select:none">${askFupL(f)}</span>`).join('')}</div>`:''}`;
-}
-
 /* ===================== v11.14 国内真实录取案例库（300+ · 全部中国大陆高中背景） ===================== */
 
 const CASE_T1=['普林斯顿','哈佛','斯坦福','耶鲁','麻省理工','加州理工','芝加哥大学','牛津','剑桥'];
@@ -7460,6 +7181,7 @@ function parseHash(){
   return {r:'home',p:{}};
 }
 function navigate(r,p={}){
+  if(['ask','forum','leaderboard','post'].includes(r)){ r='home'; p={}; }
   route=r; params=p;
   const h=routeToHash(r,p);
   if(location.hash!==h){ __pushing=true; location.hash=h; __pushing=false; }
@@ -7472,6 +7194,8 @@ function navigate(r,p={}){
 let __pushing=false;
 window.addEventListener('hashchange',()=>{ if(__pushing) return; const rt=parseHash(); route=rt.r; params=rt.p; window.scrollTo({top:0,behavior:'instant'}); render(); document.querySelectorAll('.nav-link').forEach(l=>l.classList.toggle('active',l.dataset.r===route)); document.querySelectorAll('.tabbar .tb').forEach(t=>t.classList.toggle('on',t.dataset.r===route)); try{ uvPV(); }catch(e){} });
 function render(){
+  // Retired feature bookmarks and notification links return to the home page.
+  if(['ask','forum','leaderboard','post'].includes(route)){ route='home'; params={}; history.replaceState(null,'','#/'); }
   stopHeroShow(); // 离开首页即停止轮播
   document.body.removeAttribute('data-c'); // reset school color context
   if(route==='home') renderHome();
@@ -7481,13 +7205,13 @@ function render(){
   else if(route==='about') renderAbout();
   else if(route==='fav') renderFav();
   else if(route==='compare') renderCompare();
-  else if(route==='hsrank') renderHsRank(); else if(route==='hscmp') renderHsCompare(); else if(route==='ask') renderAsk(); else if(route==='cases') renderCases(); else if(route==='roi') renderRoi();
+  else if(route==='hsrank') renderHsRank(); else if(route==='hscmp') renderHsCompare(); else if(route==='cases') renderCases(); else if(route==='roi') renderRoi();
   else if(route==='map') renderMap();
   else if(route==='essays') renderEssays();
   else if(route==='apply') renderApply(params);
   else if(route==='fit') renderFit(params);
-  else if(route==='auth') renderAuth(); else if(route==='me') renderMe(); else if(route==='forum') forumEnter(params);
-  else if(route==='notifications') renderNotifications(); else if(route==='leaderboard') renderLeaderboard();
+  else if(route==='auth') renderAuth(); else if(route==='me') renderMe();
+  else if(route==='notifications') renderNotifications();
   else if(route==='privacy') renderPrivacy(); else if(route==='terms') renderTerms(); else if(route==='admin') renderAdmin();
   else renderHome();
 }
@@ -7562,8 +7286,8 @@ function renderHome(){
         <div class="hero-chips">
           <span class="hero-chip" onclick="navigate('cases')">${L('📊 录取案例库','📊 Cases')}</span>
           <span class="hero-chip" onclick="navigate('hsrank')">${L('🎓 高中升学榜','🎓 HS Rankings')}</span>
-          <span class="hero-chip" onclick="navigate('ask')">${L('🧠 真鉴问答','🧠 Answers')}</span>
-          <span class="hero-chip" onclick="navigate('forum')">${L('💬 真鉴论坛 · 就读经验讨论','💬 Forum — student voices')}</span>
+
+
           <span class="hero-chip" onclick="navigate('roi')">${L('💰 ROI 计算器','💰 ROI Calculator')}</span>
           <span class="hero-chip" onclick="navigate('apply')">${L('🗓️ 申请 · 2025-26 各校文书题 + 轮次 + 分数','🗓️ Apply — 2025-26 essays, rounds & stats')}</span>
         </div>
@@ -8537,7 +8261,7 @@ function renderUni(id){
             <span class="list-pill" data-id="${u.id}" onclick="listPicker('${u.id}',event)" style="cursor:pointer;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.35);color:#fff;font-size:13px;font-weight:700;background:rgba(255,255,255,0.05);user-select:none">${listPillLabel(u.id)}</span>
             <span onclick="shareUni('${u.id}',event)" style="cursor:pointer;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.35);color:#fff;font-size:13px;background:rgba(255,255,255,0.05);user-select:none">${L('🔗 分享','🔗 Share')}</span>
             <span onclick="sharePoster('${u.id}',event)" style="cursor:pointer;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.35);color:#fff;font-size:13px;background:rgba(255,255,255,0.05);user-select:none">${L('🖼️ 海报','🖼️ Poster')}</span>
-            <span onclick="navigate('forum',{school:'${u.id}'})" style="cursor:pointer;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.35);color:#fff;font-size:13px;background:rgba(255,255,255,0.05);user-select:none">${L('💬 讨论','💬 Discuss')}</span>
+
           </div>
         </div>
         <div style="position:absolute;top:40px;right:40px;z-index:3;width:120px;height:120px;border-radius:20px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(0,0,0,0.18);transition:all 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
@@ -10079,62 +9803,8 @@ function curatedMainHTML(){
     <div id="cur-tagbar">${curTagBarHTML()}</div>
     <div id="cur-list">${curListHTML()}</div>`;
 }
-function renderForum(){
-  const schoolU=forumSchool?UNIS.find(u=>u.id===forumSchool):null;
-  const me=currentUser();
-  app.innerHTML=`<div class="wrap" style="padding-top:36px;padding-bottom:70px">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px">
-      <div>
-        <h1 class="pg-h1" style="font-family:'Noto Serif SC',serif;font-size:34px;font-weight:800">💬 ${L('真鉴论坛','Veritas Forum')}</h1>
-        <p style="font-size:13.5px;color:var(--text-soft);margin-top:8px">${L('真实的选校讨论 · 发帖与评论均经 ','Real application talk · posts & comments pass ')}<b style="color:#047857">${L('AI 自动审核','AI auto-moderation')}</b>${window.__apiOn?L('（服务端规则引擎）',' (server-side rule engine)'):L('（演示规则引擎）',' (demo rule engine)')}</p>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-        <button class="nav-search-btn" style="background:rgba(128,0,0,.07);color:#800000;width:auto;height:auto;border-radius:10px;padding:10px 18px;font-size:13.5px;font-weight:800;border:1.5px solid #E3D5B8" onclick="navigate('leaderboard')">${L('🏆 贡献榜','🏆 Leaderboard')}</button>
-        <button class="nav-search-btn" style="background:#8C1515;width:auto;height:auto;border-radius:10px;padding:10px 22px;font-size:14px;font-weight:800" onclick="openCompose()">${L('✏️ 发新帖','✏️ New post')}</button>
-      </div>
-    </div>
-    <div class="forum-tabs">
-      <span class="forum-tab ${forumTab==='discuss'?'on':''}" onclick="setForumTab('discuss')">💬 ${L('讨论区','Discussion')}</span>
-      <span class="forum-tab ${forumTab==='curated'?'on':''}" onclick="setForumTab('curated')">✦ ${L('社区精选','Curated')}<span style="font-weight:600;opacity:.65;margin-left:4px">${FORUM_SEED.length+FORUM_SEED_CN.length}</span></span>
-    </div>
-    ${forumTab==='curated'?curatedMainHTML():''}
-    ${forumTab==='discuss'?`
-    <div class="forum-head">
-      <input class="f-input" id="forum-q" placeholder="${L('🔍 搜索帖子标题 / 正文 / 作者','🔍 Search title / body / author')}" value="${esc(forumQ)}" oninput="forumQ=this.value;if(imeBusy(event))return;if(window.__apiOn)forumRefreshDeb();else paintForumList()">
-      <select class="forum-sel" onchange="forumSchool=this.value;params.school=this.value;if(window.__apiOn)forumRefresh(false);else paintForumList()">
-        <option value="">${L('🎓 全部学校','🎓 All schools')}</option>
-        ${getVisibleUnis().map(u=>`<option value="${u.id}" ${forumSchool===u.id?'selected':''}>${esc(uniName(u))}</option>`).join('')}
-      </select>
-    </div>
-    ${schoolU?`<div style="margin:-6px 0 16px;font-size:12.5px;color:#8a6d2f;font-weight:700">${L('正在筛选：','Filtering: ')}${esc(L(schoolU.name,schoolU.nameEn))} <span class="post-act" style="color:#800000" onclick="forumSchool='';params.school='';renderForum()">${L('✕ 清除','✕ Clear')}</span></div>`:''}
-    ${forumCompose?`<div class="me-card" id="compose-box" style="margin-bottom:20px;border:1.5px solid #E3D5B8">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-        <div style="font-family:'Noto Serif SC',serif;font-size:19px;font-weight:800">${L('✏️ 发新帖','✏️ New Post')}</div>
-        <span style="font-size:11.5px;color:#047857;font-weight:700">${L('🤖 提交后将进行 AI 自动审核（演示规则引擎）','🤖 AI auto-review on submit (demo rule engine)')}</span>
-      </div>
-      <div class="f-row"><label class="f-label">${L('标题（5-60 字）','Title (5–60 chars)')}</label>
-        <input class="f-input" id="pt-title" maxlength="60" value="${esc(forumDraft.t)}" oninput="forumDraft.t=this.value" placeholder="${L('一句话说清你的问题或经验','Sum up your question or experience')}"></div>
-      <div class="f-row"><label class="f-label">${L('正文（20-2000 字）','Body (20–2000 chars)')}</label>
-        <textarea class="f-input" id="pt-body" rows="7" maxlength="2000" oninput="forumDraft.b=this.value" placeholder="${L('分享真实经历与数据讨论；广告、中介推广、联系方式、辱骂内容将被 AI 审核拦截','Share real experience & data discussion — ads, agency promo, contact info and abuse will be blocked by AI review')}" style="resize:vertical;line-height:1.7">${esc(forumDraft.b)}</textarea></div>
-      <div class="f-row"><label class="f-label">${L('Tag 学校（必选 1-3 所）','Tag schools (1–3 required)')}</label>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:9px" id="pt-tags">
-          ${forumTags.map(id=>{const u=UNIS.find(x=>x.id===id);return u?`<span class="tag-pick-chip"><span style="width:20px;height:20px">${crest(u,20,5,u.primary,u.secondary)}</span>${esc(uniName(u))}<span class="x" onclick="rmTagPick('${id}')">✕</span></span>`:'';}).join('')}
-        </div>
-        <div style="position:relative">
-          <input class="f-input" id="ptag-q" placeholder="${L('🔍 输入校名搜索并添加，如「UIUC」「港大」','🔍 Type a school name to add, e.g. "UIUC"')}" oninput="tagSugShow()" onblur="setTimeout(()=>{const b=document.getElementById('tag-sug');if(b)b.style.display='none'},180)">
-          <div class="tag-sug" id="tag-sug" style="display:none"></div>
-        </div>
-      </div>
-      <div class="f-err" id="pt-err"></div>
-      <div style="display:flex;gap:10px">
-        <button class="f-btn" style="flex:1" onclick="submitPost()">${L('🤖 提交并 AI 审核','🤖 Submit for AI review')}</button>
-        <button class="f-btn" style="flex:0 0 110px;background:#fff;color:#8a857c;border:1.5px solid #ddd5c8" onclick="cancelCompose()">${L('取消','Cancel')}</button>
-      </div>
-    </div>`:''}
-    <div id="forum-list">${forumListHTML()}</div>
-    ${!me?`<div style="text-align:center;font-size:12.5px;color:#A9A49A;margin-top:20px">${L('游客可浏览全部帖子；','Guests can browse everything; ')}<span class="post-act" style="color:#800000" onclick="navigate('auth')">${L('登录后可发帖与评论 →','sign in to post & comment →')}</span></div>`:''}`:''}
-  </div>`;
-}
+// Compatibility for outstanding legacy callbacks; the forum is retired.
+function renderForum(){ navigate('home'); }
 
 /* 启动（C7：先探测后端；在线则校验本地 token，失败降级为纯静态离线演示模式） */
 /* v16 性能拆分：数据经 defer 外部脚本加载，启动延后至 DOMContentLoaded（defer 先于 DCL 执行完毕）；file:// 与 http 均适用 */
@@ -10153,7 +9823,7 @@ window.__uvDataGuard=function(){
 window.__uvBoot=function(){
 (async()=>{
 try {
-  seedPosts();
+
   await detectApi();
   if(window.__apiOn&&getToken()){ await refreshMe(); } /* v16：拉取契约全字段 me（xp/等级/徽章/未读/isAdmin），401 自动清理 */
   paintNavAuth(); const _rt=parseHash(); route=_rt.r; params=_rt.p; render(); document.querySelectorAll('.tabbar .tb').forEach(t=>t.classList.toggle('on',t.dataset.r===route));
